@@ -36,7 +36,7 @@ if __name__ == "__main__":
         print('on_close: args=>{}'.format(args))
 
     def test_on_error(message, *args):
-        print('on_error args=>{}'.format(args))
+        print('on_error args=>{}, message=>{}'.format(args, message))
     
     sdk = nls.NlsStreamInputTtsSynthesizer(
         token=TEST_ACCESS_TOKEN,
