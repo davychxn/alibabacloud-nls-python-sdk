@@ -28,7 +28,7 @@ class TestRealtimeMeeting:
         print("test_on_start:{}".format(message))
 
     def test_on_error(self, message, *args):
-        print("on_error args=>{}".format(args))
+        print("on_error message=>{} args=>{}".format(message, args))
 
     def test_on_close(self, *args):
         print("on_close: args=>{}".format(args))

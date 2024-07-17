@@ -138,6 +138,11 @@ class NlsRealtimeMeeting:
 
     def __tr_core_on_error(self, msg, *args):
         logging.debug('__tr_core_on_error:msg={} args={}'.format(msg, args))
+        with self.__start_cond:
+            self.__start_flag = False
+            self.__start_cond.notify()
+        if self.__on_error:
+            self.__on_error(msg, *self.__callback_args)
 
     def __tr_core_on_close(self):
         logging.debug('__tr_core_on_close')
