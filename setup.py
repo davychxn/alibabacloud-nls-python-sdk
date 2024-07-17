@@ -28,7 +28,7 @@ requires = [
 ]
 
 setup_args = {
-    'version': "1.0.0",
+    'version': "1.1.0",
     'author': "jiaqi.sjq",
     'author_email': "jiaqi.sjq@alibaba-inc.com",
     'description': "python sdk for nls",
